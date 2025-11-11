@@ -1,22 +1,38 @@
+server:
+  port: 8072
+
 spring:
-  application:
-    name: ${SPRING_APP_NAME:gatewayserver}
-  
   config:
     activate:
       on-profile: prod
-
+      
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
+  
   datasource:
-    url: jdbc:mysql://${DATABASE_HOST:localhost}:${DATABASE_PORT:3311}/${DATABASE_NAME:eazybank}
+    url: jdbc:mysql://${DATABASE_HOST:localhost}:${DATABASE_PORT:3306}/${DATABASE_NAME:eazybank}
     username: ${DATABASE_USERNAME:root}
     password: ${DATABASE_PASSWORD:root}
 
-  jpa:
-    show-sql: ${JPA_SHOW_SQL:false}
-    properties:
-      hibernate:
-        format_sql: ${HIBERNATE_FORMAT_SQL:false}
-
+    jpa:
+      show-sql: ${JPA_SHOW_SQL:false}
+      properties:
+        hibernate:
+          format_sql: ${HIBERNATE_FORMAT_SQL:false}
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+  
+  cloud:
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: false
+              lowerCaseServiceId: true
 logging:
   level:
     org.springframework.security: ${SPRING_SECURITY_LOG_LEVEL:ERROR}
@@ -26,4 +42,22 @@ logging:
 server:
   servlet:
     session:
-      timeout: ${SESSION_TIMEOUT:10m}
+      timeout: ${SESSION_TIMEOUT:20m}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      access: unrestricted
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: "http://localhost:8070/eureka/"
