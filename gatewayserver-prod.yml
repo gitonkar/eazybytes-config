@@ -5,6 +5,10 @@ server:
       timeout: ${SESSION_TIMEOUT:20m}
 
 spring:
+  config:
+    activate:
+      on-profile: prod
+  
   rabbitmq:
     host: "localhost"
     port: 5672
