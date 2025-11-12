@@ -7,7 +7,7 @@ server:
 spring:
   config:
     activate:
-      on-profile: prod
+      on-profile: qa
       
   rabbitmq:
     host: "localhost"
@@ -15,17 +15,11 @@ spring:
     username: "guest"
     password: "guest"
   
-  datasource:
-    url: jdbc:mysql://${DATABASE_HOST:localhost}:${DATABASE_PORT:3306}/${DATABASE_NAME:eazybank}
-    username: ${DATABASE_USERNAME:root}
-    password: ${DATABASE_PASSWORD:root}
+  r2dbc:
+    url: r2dbc:mysql://localhost:3311/eazybank
+    username: root
+    password: root
 
-    jpa:
-      show-sql: ${JPA_SHOW_SQL:false}
-      properties:
-        hibernate:
-          format_sql: ${HIBERNATE_FORMAT_SQL:false}
-          
   cloud:
     gateway:
       server:
