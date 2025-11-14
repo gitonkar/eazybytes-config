@@ -5,7 +5,7 @@ server:
     key-store: classpath:keystore.p12
     key-store-password: changeit
     key-store-type: PKCS12
-  servlet:
+  reactive:
     session:
       timeout: ${SESSION_TIMEOUT:20m}
 
