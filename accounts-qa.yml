@@ -1,8 +1,20 @@
+server:
+  port: 8080
 spring:
+  application:
+    name: "accounts"
+  profiles:
+    active:
+      - "qa"
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
   datasource:
     url: jdbc:mysql://localhost:3306/school_db
     username: root
-    password: root
+    password: root  
   jpa:
     hibernate:
       ddl-auto: none
@@ -10,7 +22,13 @@ spring:
   sql:
     init:
       mode: always
-      
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"      
+
 build:
   version: "5.0"
 
