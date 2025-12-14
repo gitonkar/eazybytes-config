@@ -11,7 +11,7 @@ server:
     password: "{cipher}3c83fa5ee72dc9f2e73e8a281b306b7e9a332c760ab3251ee327080739415502"
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     show-sql: true
   sql:
     init:
