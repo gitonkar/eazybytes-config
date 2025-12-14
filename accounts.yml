@@ -3,9 +3,6 @@ server:
 spring:
   application:
     name: "accounts"
-  profiles:
-    active:
-      - "qa"
   rabbitmq:
     host: "localhost"
     port: 5672
