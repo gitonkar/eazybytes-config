@@ -7,8 +7,8 @@ server:
     password: "{cipher}3f179a9758213ad4aff26c224f6ed86c4fead70cc944d925ca014d345a6a70ae"
   datasource:
     url: jdbc:mysql://localhost:3306/school_db
-    username: {cipher}41de8234702bf0f5bdfe88c70ea5074ccd9cf2ad66b25db4c420c1a8c3dc34b5
-    password: {cipher}3c83fa5ee72dc9f2e73e8a281b306b7e9a332c760ab3251ee327080739415502
+    username: "{cipher}41de8234702bf0f5bdfe88c70ea5074ccd9cf2ad66b25db4c420c1a8c3dc34b5"
+    password: "{cipher}3c83fa5ee72dc9f2e73e8a281b306b7e9a332c760ab3251ee327080739415502"
   jpa:
     hibernate:
       ddl-auto: create
