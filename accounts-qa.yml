@@ -1,8 +1,8 @@
 build:
-  version: "5.0"
+  version: "4.0"
 
 accounts:
-  message: "Welcome to EazyBank accounts related QA APIs hookdeck"
+  message: "Welcome to EazyBank accounts related QA APIs"
   contactDetails:
     name: "Smitha Ray - QA Lead"
     email: "smitha@eazybank.com"
