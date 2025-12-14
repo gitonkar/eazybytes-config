@@ -3,8 +3,10 @@ server:
   rabbitmq:
     host: "localhost"
     port: 5672
-    username: "{cipher}792bb8d2194ce0b8e0e29ceacd671c41b89c92b81ad9b9fe649135cb33cce2bb"
-    password: "{cipher}3f179a9758213ad4aff26c224f6ed86c4fead70cc944d925ca014d345a6a70ae"
+#    username: "{cipher}792bb8d2194ce0b8e0e29ceacd671c41b89c92b81ad9b9fe649135cb33cce2bb"
+#    password: "{cipher}3f179a9758213ad4aff26c224f6ed86c4fead70cc944d925ca014d345a6a70ae"
+      username: "guest"
+      password: "guest"
   datasource:
     url: jdbc:mysql://localhost:3306/school_db
     username: {cipher}41de8234702bf0f5bdfe88c70ea5074ccd9cf2ad66b25db4c420c1a8c3dc34b5
