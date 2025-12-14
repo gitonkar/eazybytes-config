@@ -24,7 +24,7 @@ management:
         include: "*"      
 
 build:
-  version: "3.0"
+  version: "6.0"
 
 accounts:
   message: "Hey, welcome to EazyBank accounts related prod APIs."
