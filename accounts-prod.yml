@@ -1,6 +1,5 @@
 server:
-  port: 8080
-spring:  
+  port: 8080 
   rabbitmq:
     host: "localhost"
     port: 5672
