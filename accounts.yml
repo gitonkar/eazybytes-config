@@ -20,6 +20,15 @@ spring:
     init:
       mode: always
 
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+
 management:
   endpoints:
     web:
