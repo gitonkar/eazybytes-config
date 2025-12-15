@@ -19,7 +19,6 @@ spring:
   sql:
     init:
       mode: always
-
 eureka:
   instance:
     preferIpAddress: true
@@ -28,16 +27,13 @@ eureka:
     registerWithEureka: true
     serviceUrl:
       defaultZone: http://localhost:8070/eureka/
-
 management:
   endpoints:
     web:
       exposure:
         include: "*"      
-
 build:
   version: "3.0"
-
 accounts:
   message: "Welcome to EazyBank accounts related docker APIs with hookdeck added"
   contactDetails:
