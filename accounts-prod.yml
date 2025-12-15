@@ -1,5 +1,6 @@
 server:
   port: 8080
+spring:  
   rabbitmq:
     host: "localhost"
     port: 5672
@@ -16,16 +17,21 @@ server:
   sql:
     init:
       mode: always
-
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/      
 management:
   endpoints:
     web:
       exposure:
         include: "*"      
-
 build:
   version: "6.0"
-
 accounts:
   message: "Hey, welcome to EazyBank accounts related prod APIs."
   contactDetails:
