@@ -1,7 +1,12 @@
 
 server:
   port: 8073
-spring:  
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: "http://localhost:8180/realms/eazybankdev/protocol/openid-connect/certs"  
   cloud:
     gateway:
       server:
@@ -33,7 +38,9 @@ logging:
   level:
     com:
       example:
-        mvc_gateway_server: DEBUG
+        mvc_gateway_server: ${SPRING_SECURITY_LOG_LEVEL:TRACE}
+  pattern:
+    console: ${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}      
 info:
   app:
     name: "mvcgatewayserver"
