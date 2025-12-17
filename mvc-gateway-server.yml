@@ -1,1 +1,42 @@
 
+server:
+  port: 8073
+spring:  
+  cloud:
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: false
+              lowerCaseServiceId: true
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: "http://localhost:8070/eureka/"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      access: unrestricted
+  info:
+    env:
+      enabled: true
+logging:
+  level:
+    com:
+      example:
+        mvc_gateway_server: DEBUG
+info:
+  app:
+    name: "mvcgatewayserver"
+    description: "Eazy Bank Gateway Server Application"
+    version: "1.0.0"      
+      
