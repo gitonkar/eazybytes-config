@@ -1,11 +1,6 @@
 server:
   port: 8072
 spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: "http://localhost:8180/realms/eazybankdev/protocol/openid-connect/certs"
   cloud:
     gateway:
       server:
