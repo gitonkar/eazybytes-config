@@ -7,7 +7,6 @@ spring:
         jwt:
           jwk-set-uri: "http://localhost:7080/realms/master/protocol/openid-connect/certs"
 eureka:
-eureka:
   instance:
     preferIpAddress: true
   client:
