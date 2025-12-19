@@ -6,6 +6,7 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: "http://localhost:7080/realms/master/protocol/openid-connect/certs"
+    debug: true      
 eureka:
   instance:
     preferIpAddress: true
@@ -24,7 +25,9 @@ management:
       enabled: true
 logging:
   level:
-    org.springframework.security: DEBUG
+    org.springframework.security: TRACE
+    org.springframework.security.web.server: TRACE
+    org.springframework.web.reactive: DEBUG
   pattern:
     console: ${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}          
 info:
