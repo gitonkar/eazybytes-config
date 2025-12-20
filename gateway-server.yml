@@ -16,8 +16,8 @@ spring:
           jwk-set-uri: "http://localhost:8180/realms/eazybankdev/protocol/openid-connect/certs"
         opaque:
           introspection-uri: ${INTROSPECT_URI:http://localhost:8180/realms/eazybankdev/protocol/openid-connect/token/introspect}
-          introspection-client-id: ${INTROSPECT_ID:eazybankintrospect}
-          introspection-client-secret: ${INTROSPECT_SECRET:c1BK9Bg2REeydBbvUoUeKCbD2bvJzXGj}               
+          introspection-client-id: ${INTROSPECT_ID:eazybankapi}
+          introspection-client-secret: ${INTROSPECT_SECRET:rZHp1TZzGxrXe2YdbxUjYh4LLyl9sS5S}               
 eureka:
   instance:
     preferIpAddress: true
