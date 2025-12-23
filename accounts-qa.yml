@@ -32,10 +32,10 @@ management:
         include: "*"
 logging:
   level:
-    org:
-    springframework:
-      security: ${SPRING_SECURITY_LOG_LEVEL:DEBUG}
-      oauth2: ${SPRING_SECURITY_LOG_LEVEL:DEBUG}
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.server: DEBUG
   pattern:
     console: ${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}              
 build:
