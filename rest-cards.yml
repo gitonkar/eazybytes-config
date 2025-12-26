@@ -29,7 +29,7 @@ management:
         include: "*"      
 logging:
   level:
-    org.springframework.data.rest=DEBUG
+    org.springframework.data.rest: DEBUG
 
 build:
   version: "4.0"
