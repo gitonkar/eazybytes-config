@@ -27,6 +27,10 @@ management:
     web:
       exposure:
         include: "*"      
+logging:
+  level:
+    org.springframework.data.rest=DEBUG
+
 build:
   version: "4.0"
 accounts:
